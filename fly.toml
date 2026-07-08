@@ -1,24 +1,25 @@
-# ===============================================
-# LastMailer - Fly.io configuration
-# غيّر اسم التطبيق "app" إلى اسم فريد خاص بك
-# ===============================================
-app = "lastmailer"
-primary_region = "fra"
+# fly.toml app configuration file generated for renderhub on 2026-07-08T18:02:23Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'renderhub'
+primary_region = 'ams'
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [env]
-  NODE_ENV = "production"
-  PORT = "8080"
+  NODE_ENV = 'production'
+  PORT = '8080'
 
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
 
 [[vm]]
-  size = "shared-cpu-1x"
-  memory = "512mb"
+  size = 'shared-cpu-1x'
+  memory = '512mb'
