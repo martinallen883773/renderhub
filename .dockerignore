@@ -1,0 +1,7 @@
+node_modules
+dist
+.git
+.DS_Store
+*.zip
+db_backup/*.sql
+.env
